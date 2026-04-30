@@ -9,17 +9,10 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 const experiences = [
   {
     type: "education",
-    title: "BSc (Hons) Software Engineering",
-    organization: "Cardiff Metropolitan University",
-    date: "2025 - 2026",
-    description: "Results Pending. Exposure to Machine Learning, Analytics & Business Intelligence, Research and more."
-  },
-  {
-    type: "work",
-    title: "Freelance Web Developer",
-    organization: "Self-Employed",
-    date: "2024 - Present",
-    description: "Designing and developing tailored web applications for diverse clients. Specializing in modern technologies like React, Next.js, and delivering highly optimized, user-centric experiences."
+    title: "BTEC HND in Software Engineering",
+    organization: "Pearson College London",
+    date: "2020 - 2022",
+    description: "Graduated with a Merit Pass. Specialized in Web Design & Development."
   },
   {
     type: "work",
@@ -29,11 +22,18 @@ const experiences = [
     description: "Contributed to several internal and outsourced web projects utilizing WordPress, Git, React.js, and more. Self-exposure to AWS and SEO resulted in a 40% performance bump."
   },
   {
+    type: "work",
+    title: "Freelance Web Developer",
+    organization: "Self-Employed",
+    date: "2024 - Present",
+    description: "Designing and developing tailored web applications for diverse clients. Specializing in modern technologies like React, Next.js, and delivering highly optimized, user-centric experiences."
+  },
+  {
     type: "education",
-    title: "BTEC HND in Software Engineering",
-    organization: "Pearson College London",
-    date: "2020 - 2022",
-    description: "Graduated with a Merit Pass. Specialized in Web Design & Development."
+    title: "BSc (Hons) Software Engineering",
+    organization: "Cardiff Metropolitan University",
+    date: "2025 - 2026",
+    description: "Results Pending. Exposure to Machine Learning, Analytics & Business Intelligence, Research and more."
   }
 ];
 
@@ -62,14 +62,14 @@ export default function Experience() {
     // Nodes popping in
     nodesRef.current.forEach((node, index) => {
       if (!node) return;
-      
+
       const isLeft = index % 2 === 0;
-      
+
       gsap.fromTo(node,
-        { 
-          x: isLeft ? -50 : 50, 
+        {
+          x: isLeft ? -50 : 50,
           opacity: 0,
-          scale: 0.9 
+          scale: 0.9
         },
         {
           x: 0,
@@ -97,26 +97,26 @@ export default function Experience() {
       <div ref={containerRef} className="relative w-full">
         {/* Background Line */}
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/10 transform md:-translate-x-1/2" />
-        
+
         {/* Animated Fill Line */}
-        <div 
+        <div
           ref={lineRef}
-          className="absolute left-4 md:left-1/2 top-0 w-[3px] bg-gradient-to-b from-accent-purple via-accent-blue to-accent-green transform md:-translate-x-1/2 h-0 rounded-full" 
+          className="absolute left-4 md:left-1/2 top-0 w-[3px] bg-gradient-to-b from-accent-purple via-accent-blue to-accent-green transform md:-translate-x-1/2 h-0 rounded-full"
         />
 
         <div className="space-y-16">
           {experiences.map((item, index) => {
             const isLeft = index % 2 === 0;
             return (
-              <div 
+              <div
                 key={index}
                 ref={el => { nodesRef.current[index] = el; }}
                 className={`flex flex-col md:flex-row relative items-start ${isLeft ? 'md:flex-row-reverse' : ''}`}
               >
-                
+
                 {/* Timeline Icon */}
                 <div className="absolute left-4 md:left-1/2 w-10 h-10 rounded-full glass border border-white/20 transform -translate-x-1/2 flex items-center justify-center z-10 bg-[#0a0a0a]">
-                  {item.type === 'work' 
+                  {item.type === 'work'
                     ? <Briefcase className="w-4 h-4 text-accent-blue" />
                     : <GraduationCap className="w-4 h-4 text-accent-purple" />
                   }
@@ -134,7 +134,7 @@ export default function Experience() {
                     {item.description}
                   </p>
                 </div>
-                
+
               </div>
             );
           })}
