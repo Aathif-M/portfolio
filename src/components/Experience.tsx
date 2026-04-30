@@ -8,13 +8,6 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 
 const experiences = [
   {
-    type: "education",
-    title: "BTEC HND in Software Engineering",
-    organization: "Pearson College London",
-    date: "2020 - 2022",
-    description: "Graduated with a Merit Pass. Specialized in Web Design & Development."
-  },
-  {
     type: "work",
     title: "Associate Web Developer",
     organization: "Metacorp Pvt Ltd",
@@ -34,6 +27,13 @@ const experiences = [
     organization: "Cardiff Metropolitan University",
     date: "2025 - 2026",
     description: "Results Pending. Exposure to Machine Learning, Analytics & Business Intelligence, Research and more."
+  },
+  {
+    type: "education",
+    title: "BTEC HND in Software Engineering",
+    organization: "Pearson College London",
+    date: "2020 - 2022",
+    description: "Graduated with a Merit Pass. Specialized in Web Design & Development."
   }
 ];
 
