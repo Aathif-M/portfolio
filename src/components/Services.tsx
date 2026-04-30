@@ -3,32 +3,32 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Server, MonitorSmartphone, Zap, ShieldCheck } from 'lucide-react';
+import { Layers, Sparkles, Palette, Wrench } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const services = [
   {
     title: "Full-Stack Expertise",
     description: "I build scalable applications using a modern React-based stack, ensuring seamless integration between the database and the front-end.",
-    icon: <Server className="w-8 h-8 text-accent-purple" />,
+    icon: <Layers className="w-8 h-8 text-accent-purple" />,
     className: "md:col-span-2 lg:col-span-2"
   },
   {
     title: "Advanced Web Motion",
     description: "I specialize in high-performance GSAP animations, creating fluid and interactive user experiences that set your project apart.",
-    icon: <Zap className="w-8 h-8 text-accent-blue" />,
+    icon: <Sparkles className="w-8 h-8 text-accent-blue" />,
     className: "md:col-span-1 lg:col-span-1"
   },
   {
     title: "Visual Design Integration",
     description: "Beyond code, I leverage Photoshop to craft polished web assets, ensuring every visual element is professional and brand-aligned.",
-    icon: <MonitorSmartphone className="w-8 h-8 text-accent-green" />,
+    icon: <Palette className="w-8 h-8 text-accent-green" />,
     className: "md:col-span-1 lg:col-span-1"
   },
   {
     title: "Practical Problem Solver",
     description: "From complex debugging to managing live deployments, I provide reliable technical solutions with a focus on efficiency and performance.",
-    icon: <ShieldCheck className="w-8 h-8 text-yellow-500" />,
+    icon: <Wrench className="w-8 h-8 text-yellow-500" />,
     className: "md:col-span-2 lg:col-span-2"
   }
 ];
