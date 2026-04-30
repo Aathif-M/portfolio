@@ -12,7 +12,7 @@ const experiences = [
     title: "Associate Web Developer",
     organization: "Metacorp Pvt Ltd",
     date: "2022 - Present",
-    description: "Contributed to several internal and outsourced web projects utilizing WordPress, Git, React.js, and more. Self-exposure to AWS and SEO resulted in a 40% performance bump."
+    description: "Contributed to several internal and outsourced web projects utilizing WordPress, Git, React.js and more. Self-exposure to AWS and SEO resulted in a 40% performance bump."
   },
   {
     type: "work",
@@ -26,7 +26,7 @@ const experiences = [
     title: "BSc (Hons) Software Engineering",
     organization: "Cardiff Metropolitan University",
     date: "2025 - 2026",
-    description: "Results Pending. Exposure to Machine Learning, Analytics & Business Intelligence, Research and more."
+    description: "Exposure to Machine Learning, Analytics & Business Intelligence, Research and more. Pending Results."
   },
   {
     type: "education",

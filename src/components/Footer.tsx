@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 const GithubIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -75,7 +75,7 @@ export default function Footer() {
           ref={headlineRef} 
           className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-16 text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40"
         >
-          Let's build<br/>something real.
+          Let&apos;s build<br/>something real.
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
