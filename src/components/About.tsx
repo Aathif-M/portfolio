@@ -50,20 +50,17 @@ export default function About() {
   return (
     <section id="about" ref={containerRef} className="py-24 px-6 relative max-w-7xl mx-auto w-full">
       <SectionHeader title="About_Me" subtitle="01. The person behind the code" />
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
+
         {/* Narrative */}
         <div ref={narrativeRef} className="space-y-6 text-lg text-foreground/80 leading-relaxed">
           <p>
-            I'm a passionate Full Stack Developer who translates complex problems into elegant, scaleable solutions. I believe that exceptional digital experiences are born at the intersection of beautiful design and rock-solid engineering.
-          </p>
+            I am a software engineering student dedicated to building robust, user-centric web applications. My journey is driven by a fascination with how clean code and intuitive design solve complex problems. I focus on creating digital experiences that are not only functional but also highly efficient and scalable.          </p>
           <p>
-            With expertise across the modern web stack, I focus on building responsive, performant, and accessible applications. From weaving micro-animations into a frontend interface to architecting robust backend APIs, I treat every line of code as an integral piece of the larger puzzle.
-          </p>
+            Technically, I specialize in full-stack development, utilizing modern frameworks to bring ideas to life. I enjoy the challenge of mastering new tools, particularly those that enable high-performance, interactive layouts. I believe great products require a balance of technical rigor and creative experimentation.          </p>
           <p>
-            When I'm not pushing pixels or squashing bugs, you can find me exploring new technologies, contributing to open source, or enjoying a perfectly brewed cup of coffee.
-          </p>
+            Beyond coding, I am a firm believer in continuous improvement and collaborative growth. I am constantly refining my skills through personal projects and exploring emerging technologies. Currently, I am eager to contribute to innovative teams and help build the future of the digital landscape.          </p>
         </div>
 
         {/* Code Editor Window */}
@@ -77,7 +74,7 @@ export default function About() {
             </div>
             <div className="mx-auto text-xs font-mono text-foreground/50">developer.ts</div>
           </div>
-          
+
           {/* Body */}
           <div className="p-6 overflow-x-auto text-sm md:text-base font-mono leading-relaxed bg-[#0a0a0a]/50">
             <pre className="text-gray-300">
@@ -86,7 +83,7 @@ export default function About() {
               </code>
             </pre>
           </div>
-          
+
           {/* Hover Glow */}
           <div className="absolute inset-0 bg-gradient-to-tr from-accent-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
         </div>

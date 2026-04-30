@@ -8,26 +8,26 @@ import SectionHeader from './SectionHeader';
 
 const services = [
   {
-    title: "Scalable Architecture",
-    description: "Designing robust backends and database schemas that grow with your user base without compromising performance.",
+    title: "Full-Stack Expertise",
+    description: "I build scalable applications using a modern React-based stack, ensuring seamless integration between the database and the front-end.",
     icon: <Server className="w-8 h-8 text-accent-purple" />,
     className: "md:col-span-2 lg:col-span-2"
   },
   {
-    title: "Pixel-Perfect UI",
-    description: "Translating Figma designs into responsive, breathing interfaces with micro-interactions.",
-    icon: <MonitorSmartphone className="w-8 h-8 text-accent-blue" />,
+    title: "Advanced Web Motion",
+    description: "I specialize in high-performance GSAP animations, creating fluid and interactive user experiences that set your project apart.",
+    icon: <Zap className="w-8 h-8 text-accent-blue" />,
     className: "md:col-span-1 lg:col-span-1"
   },
   {
-    title: "Performance Optimization",
-    description: "Lighthouse scores of 100. Optimizing assets, bundles, and rendering strategies for lightning-fast speeds.",
-    icon: <Zap className="w-8 h-8 text-accent-green" />,
+    title: "Visual Design Integration",
+    description: "Beyond code, I leverage Photoshop to craft polished web assets, ensuring every visual element is professional and brand-aligned.",
+    icon: <MonitorSmartphone className="w-8 h-8 text-accent-green" />,
     className: "md:col-span-1 lg:col-span-1"
   },
   {
-    title: "SEO & Security",
-    description: "Baking in technical SEO and standard security practices (CORS, CSRF, XSS prevention) from day one.",
+    title: "Practical Problem Solver",
+    description: "From complex debugging to managing live deployments, I provide reliable technical solutions with a focus on efficiency and performance.",
     icon: <ShieldCheck className="w-8 h-8 text-yellow-500" />,
     className: "md:col-span-2 lg:col-span-2"
   }
