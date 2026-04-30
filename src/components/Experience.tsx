@@ -8,25 +8,32 @@ import { Briefcase, GraduationCap } from 'lucide-react';
 
 const experiences = [
   {
-    type: "work",
-    title: "Senior Frontend Engineer",
-    organization: "Tech Innovators Inc.",
-    date: "2023 - Present",
-    description: "Lead the frontend architectural decisions, migrating legacy SPAs to Next.js App Router, resulting in a 40% performance bump."
+    type: "education",
+    title: "BSc (Hons) Software Engineering",
+    organization: "Cardiff Metropolitan University",
+    date: "2025 - 2026",
+    description: "Results Pending. Exposure to Machine Learning, Analytics & Business Intelligence, Research and more."
   },
   {
     type: "work",
-    title: "Full Stack Developer",
-    organization: "Creative Digital Agency",
-    date: "2021 - 2023",
-    description: "Developed and deployed over 15 custom high-performance web applications using React, Node.js, and PostgreSQL."
+    title: "Freelance Web Developer",
+    organization: "Self-Employed",
+    date: "2024 - Present",
+    description: "Designing and developing tailored web applications for diverse clients. Specializing in modern technologies like React, Next.js, and delivering highly optimized, user-centric experiences."
+  },
+  {
+    type: "work",
+    title: "Associate Web Developer",
+    organization: "Metacorp Pvt Ltd",
+    date: "2022 - Present",
+    description: "Contributed to several internal and outsourced web projects utilizing WordPress, Git, React.js, and more. Self-exposure to AWS and SEO resulted in a 40% performance bump."
   },
   {
     type: "education",
-    title: "BSc in Computer Science",
-    organization: "University of Technology",
-    date: "2017 - 2021",
-    description: "Graduated with First Class Honors. Specialized in Software Engineering and Human-Computer Interaction."
+    title: "BTEC HND in Software Engineering",
+    organization: "Pearson College London",
+    date: "2020 - 2022",
+    description: "Graduated with a Merit Pass. Specialized in Web Design & Development."
   }
 ];
 

@@ -4,9 +4,9 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const SKILLS = [
-  "React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP", 
-  "Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL", 
-  "Docker", "AWS", "Figma", "UI/UX", "Git"
+  "React.js", "Next.js", "TypeScript", "Tailwind CSS", "Bootstrap", "GSAP",
+  "Node.js", "Express.js", "Wordpress", "PostgreSQL", "MySQL", "AWS",
+  "Git", "VSC", "UI/UX", "Photoshop"
 ];
 
 export default function SkillsMarquee() {
@@ -18,7 +18,7 @@ export default function SkillsMarquee() {
 
     // Calculate halfway point of the track which contains 2 duplicate sets
     const totalWidth = trackRef.current.scrollWidth;
-    
+
     gsap.to(trackRef.current, {
       x: -totalWidth / 2,
       ease: "none",
@@ -38,8 +38,8 @@ export default function SkillsMarquee() {
       <div className="relative flex whitespace-nowrap" ref={marqueeRef}>
         <div ref={trackRef} className="flex gap-8 md:gap-16 px-4">
           {duplicatedSkills.map((skill, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex items-center justify-center font-mono text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/20"
             >
               {skill}
