@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TeeBeeU | Full Stack Web Developer",
+  title: "Mohamed Aathif | Full Stack Web Developer",
   description: "Crafting exceptional digital experiences with modern technologies, building scalable applications from concept to deployment.",
 };
 

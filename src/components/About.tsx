@@ -37,7 +37,7 @@ export default function About() {
   }, []);
 
   const codeSnippet = `const developer = {
-  name: "TeeBeeU",
+  name: "Mohamed Aathif",
   role: "Full Stack Developer",
   passion: ["clean code", "UI/UX", "animations"],
   location: "Earth",

@@ -167,7 +167,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-foreground/50 text-sm">
-          <p>© {new Date().getFullYear()} TeeBeeU. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Mohamed Aathif. All rights reserved.</p>
           <p className="mt-2 md:mt-0 flex items-center">
             Designed & Developed with passion <span className="text-red-500 mx-2">♥</span>
           </p>

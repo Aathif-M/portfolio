@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto w-full z-10 flex flex-col items-center text-center">
         
         <h1 ref={headlineRef} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4 flex gap-3 overflow-hidden">
-          {["Hi,", "I", "am", "TeeBeeU"].map((word, i) => (
+          {["Hi,", "I", "am", "Mohamed", "Aathif"].map((word, i) => (
             <span key={i} className="inline-block">{word}</span>
           ))}
         </h1>
