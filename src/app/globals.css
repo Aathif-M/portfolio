@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  /* Glowing accent colors */
+  --accent-purple: #9d4edd;
+  --accent-blue: #00b4d8;
+  --accent-green: #2ecc71;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+  
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-green: var(--accent-green);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Custom smooth scrolling */
+  scroll-behavior: smooth;
+  /* Hide native cursor since we have a custom one */
+  cursor: none; 
+}
+
+/* Ensure links and buttons hide native cursor as well, but wait, maybe native cursor fallback is good if custom cursor fails? We'll rely on our custom cursor */
+a, button, [role="button"] {
+  cursor: none;
+}
+
+/* Glassmorphism utility classes */
+@utility glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, rgba(157, 78, 221, 0.15) 0%, transparent 70%);
+}
