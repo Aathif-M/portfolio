@@ -3,32 +3,32 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Coffee, Gamepad2, PenTool, GitMerge } from 'lucide-react';
+import { Target, Gauge, Headphones, Map } from 'lucide-react';
 
 const interests = [
   {
-    icon: <GitMerge className="w-8 h-8 text-white mb-4" />,
-    title: "Open Source",
-    description: "Contributing to tools that power the web.",
-    className: "col-span-1 md:col-span-2 row-span-1 bg-gradient-to-br from-accent-purple/20 to-transparent",
+    icon: <Gauge className="w-8 h-8 text-white mb-4" />,
+    title: "Open Roads",
+    description: "Clearing my head with a long ride and the steady rhythm of a well-maintained engine.",
+    className: "col-span-1 md:col-span-2 row-span-1 bg-gradient-to-br from-accent-blue/20 to-transparent",
   },
   {
-    icon: <PenTool className="w-8 h-8 text-white mb-4" />,
-    title: "UI/UX Design",
-    description: "Obsessed with micro-interactions.",
-    className: "col-span-1 md:col-span-1 row-span-2 bg-gradient-to-br from-accent-blue/20 to-transparent flex-col justify-end",
+    icon: <Target className="w-8 h-8 text-white mb-4" />,
+    title: "On the Table",
+    description: "Finding the perfect angle and unwinding with a few frames of snooker.",
+    className: "col-span-1 md:col-span-1 row-span-2 bg-gradient-to-br from-accent-purple/20 to-transparent flex-col justify-end",
   },
   {
-    icon: <Coffee className="w-8 h-8 text-white mb-4" />,
-    title: "Coffee Brewing",
-    description: "Fueling the code, one pour-over at a time.",
-    className: "col-span-1 md:col-span-1 row-span-1 bg-gradient-to-br from-[#d4a373]/20 to-transparent",
-  },
-  {
-    icon: <Gamepad2 className="w-8 h-8 text-white mb-4" />,
-    title: "Gaming",
-    description: "Strategic mind off the clock.",
+    icon: <Headphones className="w-8 h-8 text-white mb-4" />,
+    title: "Always On",
+    description: "From classic hip-hop to early 2000s rock—my day always has a backbeat.",
     className: "col-span-1 md:col-span-1 row-span-1 bg-gradient-to-br from-accent-green/20 to-transparent",
+  },
+  {
+    icon: <Map className="w-8 h-8 text-white mb-4" />,
+    title: "Island Therapy",
+    description: "Swapping the screen to explore the hills and the coast.",
+    className: "col-span-1 md:col-span-1 row-span-1 bg-gradient-to-br from-[#d4a373]/20 to-transparent",
   }
 ];
 
