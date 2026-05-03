@@ -20,12 +20,14 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 import SectionHeader from './SectionHeader';
+import trip2islandImg from '../../public/trip2island.webp';
+import workpulseImg from '../../public/workpulse.webp';
 
 type Project = {
   title: string;
   description: React.ReactNode;
   tags: string[];
-  image: string;
+  image: any;
   liveUrl?: string;
   githubUrl?: string;
   linkedInPost?: string;
@@ -35,14 +37,14 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Trip2Island - A Premium Tourism Experience",
+    title: "Trip2Island",
     description: (
       <>
         A modern, responsive, and performance-optimized travel agency website. Featuring fluid GSAP animations, Tailwind-powered custom styling, and an integrated Web3Forms pipeline. Built with React and Vite for a seamless booking inquiry experience.
       </>
     ),
     tags: ["React", "Vite", "Tailwind CSS", "GSAP", "Web3Forms"],
-    image: "/trip2island.webp",
+    image: trip2islandImg,
     liveUrl: "https://trip2island.com",
     githubUrl: "https://github.com/Aathif-M/trip-2-island.git"
   },
@@ -54,7 +56,7 @@ const projects: Project[] = [
       </>
     ),
     tags: ["React", "Node.js", "PostgreSQL", "AWS", "Socket.io"],
-    image: "/workpulse.webp",
+    image: workpulseImg,
     linkedInPost: "https://www.linkedin.com/posts/mohamed-aathif-b4753a23b_webdevelopment-reactjs-nodejs-activity-7431633382419255297-0kY9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADuzqOcB_E6iZcMiW6d78gQwq8yVOmI6crI",
     githubUrlFrontend: "https://github.com/Aathif-M/workPulse-frontend.git",
     githubUrlBackend: "https://github.com/Aathif-M/workPulse-backend.git"
