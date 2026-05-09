@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Target, Gauge, Headphones, Map } from 'lucide-react';
+import MagicBento from './ui/MagicBento';
 
 const interests = [
   {
@@ -39,7 +40,7 @@ export default function Interests() {
     gsap.registerPlugin(ScrollTrigger);
 
     if (!containerRef.current) return;
-    const items = containerRef.current.children;
+    const items = containerRef.current.querySelectorAll('.card');
 
     gsap.fromTo(items,
       { opacity: 0, scale: 0.9 },
@@ -74,19 +75,21 @@ export default function Interests() {
           </p>
         </div>
         
-        <div ref={containerRef} className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]">
-          {interests.map((interest, index) => (
-            <div 
-              key={index} 
-              className={`glass-card border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 ${interest.className}`}
-            >
-              <div>
-                {interest.icon}
-                <h3 className="font-bold text-xl">{interest.title}</h3>
-              </div>
-              <p className="text-sm text-foreground/70 mt-2">{interest.description}</p>
-            </div>
-          ))}
+        <div ref={containerRef} className="w-full md:w-2/3">
+          <MagicBento 
+            cards={interests}
+            textAutoHide={false}
+            enableStars={true}
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            enableTilt={false}
+            enableMagnetism={false}
+            clickEffect={true}
+            spotlightRadius={200}
+            particleCount={12}
+            glowColor="132, 0, 255"
+            disableAnimations={false}
+          />
         </div>
 
       </div>
