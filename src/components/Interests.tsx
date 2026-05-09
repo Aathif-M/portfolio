@@ -7,25 +7,25 @@ import { Target, Gauge, Headphones, Map } from 'lucide-react';
 
 const interests = [
   {
-    icon: <Gauge className="w-8 h-8 text-white mb-4" />,
+    icon: <Gauge className="w-8 h-8 text-white mb-3" />,
     title: "Open Roads",
     description: "Clearing my head with a long ride and the steady rhythm of a well-maintained engine.",
     className: "col-span-1 md:col-span-2 row-span-1 bg-gradient-to-br from-accent-blue/20 to-transparent",
   },
   {
-    icon: <Target className="w-8 h-8 text-white mb-4" />,
+    icon: <Target className="w-8 h-8 text-white mb-3" />,
     title: "On the Table",
     description: "Finding the perfect angle and unwinding with a few frames of snooker.",
-    className: "col-span-1 md:col-span-1 row-span-2 bg-gradient-to-br from-accent-purple/20 to-transparent flex-col justify-end",
+    className: "col-span-1 md:col-span-1 row-span-2 bg-gradient-to-br from-accent-purple/20 to-transparent",
   },
   {
-    icon: <Headphones className="w-8 h-8 text-white mb-4" />,
+    icon: <Headphones className="w-8 h-8 text-white mb-3" />,
     title: "Always On",
     description: "From classic hip-hop to early 2000s rock—my day always has a backbeat.",
     className: "col-span-1 md:col-span-1 row-span-1 bg-gradient-to-br from-accent-green/20 to-transparent",
   },
   {
-    icon: <Map className="w-8 h-8 text-white mb-4" />,
+    icon: <Map className="w-8 h-8 text-white mb-3" />,
     title: "Island Therapy",
     description: "Swapping the screen to explore the hills and the coast.",
     className: "col-span-1 md:col-span-1 row-span-1 bg-gradient-to-br from-[#d4a373]/20 to-transparent",
@@ -74,11 +74,11 @@ export default function Interests() {
           </p>
         </div>
         
-        <div ref={containerRef} className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[160px]">
+        <div ref={containerRef} className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[minmax(180px,auto)]">
           {interests.map((interest, index) => (
             <div 
               key={index} 
-              className={`glass-card border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 ${interest.className}`}
+              className={`glass-card border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 ${interest.className}`}
             >
               <div>
                 {interest.icon}
