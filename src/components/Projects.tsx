@@ -27,6 +27,7 @@ type Project = {
   title: string;
   description: React.ReactNode;
   tags: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: any;
   liveUrl?: string;
   githubUrl?: string;
