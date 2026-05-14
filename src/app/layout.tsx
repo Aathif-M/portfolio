@@ -37,9 +37,10 @@ export default function RootLayout({
             cursorSize={75}
             isViscous
             viscous={22}
-            iterationsViscous={15}
-            iterationsPoisson={28}
-            resolution={0.5}
+            iterationsViscous={8} // Reduced from 15
+            iterationsPoisson={12} // Reduced from 28
+            resolution={0.25} // Reduced from 0.5
+            BFECC={false} // Disabled for performance
             isBounce
             autoDemo
             autoSpeed={0.4}
