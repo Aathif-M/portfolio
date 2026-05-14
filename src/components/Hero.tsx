@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ArrowRight, Mail } from 'lucide-react';
 import MagneticElement from './MagneticElement';
+import ShinyText from './ui/ShinyText';
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -84,10 +85,15 @@ export default function Hero() {
 
       <div className="max-w-5xl mx-auto w-full z-10 flex flex-col items-center text-center">
         
-        <h1 ref={headlineRef} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4 flex gap-3 overflow-hidden">
-          {["Hi,", "I", "am", "Mohamed", "Aathif"].map((word, i) => (
-            <span key={i} className="inline-block">{word}</span>
-          ))}
+        <h1 ref={headlineRef} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4 flex justify-center overflow-hidden">
+          <ShinyText
+            text="Hi, I am Mohamed Aathif"
+            speed={2.5}
+            color="#a1a1aa"
+            shineColor="#ffffff"
+            spread={100}
+            className="pb-2" // To prevent any clipping
+          />
         </h1>
 
         <h2 ref={titleRef} className="text-2xl md:text-3xl font-medium mb-8 text-transparent bg-clip-text bg-gradient-to-r from-accent-purple via-accent-blue to-accent-green">
