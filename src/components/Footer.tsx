@@ -107,6 +107,7 @@ export default function Footer() {
               <MagneticElement>
                 <a
                   href="https://github.com/Aathif-M"
+                  target="_blank" rel="noopener noreferrer"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
@@ -117,6 +118,7 @@ export default function Footer() {
               <MagneticElement>
                 <a
                   href="https://www.linkedin.com/in/mohamed-aathif-b4753a23b/"
+                  target="_blank" rel="noopener noreferrer"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
@@ -127,6 +129,7 @@ export default function Footer() {
               <MagneticElement>
                 <a
                   href="https://wa.me/+94760661888"
+                  target="_blank" rel="noopener noreferrer"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
@@ -137,6 +140,7 @@ export default function Footer() {
               <MagneticElement>
                 <a
                   href="https://www.instagram.com/teebeeu99/"
+                  target="_blank" rel="noopener noreferrer"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
