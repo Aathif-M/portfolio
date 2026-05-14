@@ -27,8 +27,7 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 
 const WhatsappIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
   </svg>
 );
 import MagneticElement from './MagneticElement';
@@ -107,7 +106,7 @@ export default function Footer() {
             <div className="flex gap-8">
               <MagneticElement>
                 <a
-                  href="#"
+                  href="https://github.com/Aathif-M"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
@@ -117,7 +116,7 @@ export default function Footer() {
               </MagneticElement>
               <MagneticElement>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/mohamed-aathif-b4753a23b/"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
@@ -127,7 +126,7 @@ export default function Footer() {
               </MagneticElement>
               <MagneticElement>
                 <a
-                  href="#"
+                  href="https://wa.me/+94760661888"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
@@ -137,7 +136,7 @@ export default function Footer() {
               </MagneticElement>
               <MagneticElement>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/teebeeu99/"
                   onMouseEnter={(e) => handleSocialHover(e, true)}
                   onMouseLeave={(e) => handleSocialHover(e, false)}
                   className="flex items-center justify-center p-4 rounded-full border border-white/20 glass"
