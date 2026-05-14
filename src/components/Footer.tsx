@@ -94,9 +94,12 @@ export default function Footer() {
               <p className="text-xl text-foreground/70 mb-2">Have a project in mind?</p>
               <a
                 href="mailto:aathifm99@gmail.com"
-                className="text-3xl md:text-5xl font-semibold hover:text-accent-blue transition-colors outline-none pb-2 border-b-2 border-transparent hover:border-accent-blue inline-block"
+                className="group relative text-3xl md:text-5xl lg:text-6xl font-bold inline-block outline-none"
               >
-                aathifm99@gmail.com
+                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue bg-[length:200%_auto] transition-all duration-500 group-hover:bg-[position:100%_center]">
+                  aathifm99@gmail.com
+                </span>
+                <span className="absolute -bottom-2 left-0 w-full h-[4px] bg-gradient-to-r from-accent-blue to-accent-purple transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 rounded-full" />
               </a>
             </div>
 
