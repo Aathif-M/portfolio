@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Send } from 'lucide-react';
@@ -35,6 +35,47 @@ import MagneticElement from './MagneticElement';
 export default function Footer() {
   const containerRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
+
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '224dd448-de58-4ce6-89c1-52d78f62f60b',
+          ...formData
+        })
+      });
+      const result = await response.json();
+      if (result.success) {
+        setIsSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        setError(result.message || 'Something went wrong');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -154,36 +195,58 @@ export default function Footer() {
 
           {/* Form */}
           <div className="glass-card p-8 md:p-12 rounded-3xl border border-white/10">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
-                <label className="text-sm text-foreground/70 ml-2">Name</label>
+                <label htmlFor="name" className="text-sm text-foreground/70 ml-2">Name</label>
                 <input
+                  id="name"
+                  name="name"
                   type="text"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="John Doe"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-accent-purple transition-colors"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm text-foreground/70 ml-2">Email</label>
+                <label htmlFor="email" className="text-sm text-foreground/70 ml-2">Email</label>
                 <input
+                  id="email"
+                  name="email"
                   type="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="john@example.com"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-accent-blue transition-colors"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm text-foreground/70 ml-2">Message</label>
+                <label htmlFor="message" className="text-sm text-foreground/70 ml-2">Message</label>
                 <textarea
+                  id="message"
+                  name="message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell me about your project..."
                   rows={4}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-accent-green transition-colors resize-none"
                 />
               </div>
 
+              {error && <p className="text-red-500 text-sm ml-2">{error}</p>}
+              {isSuccess && <p className="text-green-500 text-sm ml-2">Message sent successfully!</p>}
+
               <MagneticElement className="w-full mt-4">
-                <button className="w-full flex items-center justify-center gap-2 bg-white text-black py-4 rounded-xl font-bold text-lg hover:bg-gray-200 transition-colors">
-                  Send Message
-                  <Send className="w-5 h-5 ml-2" />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-2 bg-white text-black py-4 rounded-xl font-bold text-lg hover:bg-gray-200 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {!isSubmitting && <Send className="w-5 h-5 ml-2" />}
                 </button>
               </MagneticElement>
             </form>
