@@ -86,7 +86,7 @@ export default function Footer() {
           Let&apos;s build<br />something real.
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
 
           {/* Contact Details */}
           <div className="flex flex-col space-y-12">
@@ -94,7 +94,8 @@ export default function Footer() {
               <p className="text-xl text-foreground/70 mb-2">Have a project in mind?</p>
               <a
                 href="mailto:aathifm99@gmail.com"
-                className="group relative text-3xl md:text-5xl lg:text-6xl font-bold inline-block outline-none"
+                target="_blank" rel="noopener noreferrer"
+                className="group relative text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold inline-block outline-none break-all sm:break-normal"
               >
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-accent-purple to-accent-blue bg-[length:200%_auto] transition-all duration-500 group-hover:bg-[position:100%_center]">
                   aathifm99@gmail.com
@@ -103,7 +104,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex gap-8">
+            <div className="flex flex-wrap gap-4 sm:gap-8">
               <MagneticElement>
                 <a
                   href="https://github.com/Aathif-M"
