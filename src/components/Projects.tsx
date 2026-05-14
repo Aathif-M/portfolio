@@ -163,7 +163,7 @@ export default function Projects() {
               <div className="w-full lg:w-2/5 flex flex-col space-y-6">
                 <h3 className="text-3xl md:text-4xl font-bold">{project.title}</h3>
 
-                <div className="glass p-6 rounded-xl relative z-10 lg:-ml-12 border border-white/5 backdrop-blur-md">
+                <div className="glass p-6 rounded-xl relative z-10 border border-white/5 backdrop-blur-md">
                   <p className="text-foreground/80 leading-relaxed text-lg text-balance">
                     {project.description}
                   </p>
